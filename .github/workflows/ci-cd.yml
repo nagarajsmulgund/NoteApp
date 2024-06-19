@@ -1,5 +1,6 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
 on: [push]
 jobs:
   Explore-GitHub-Actions:
@@ -16,3 +17,19 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+      
+      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
+        uses: GuillaumeFalourd/clone-github-repo-action@main
+        with:
+          owner: 'GuillaumeFalourd'
+          repository: 'poc-github-actions'
+      
+      - name: Access cloned repository content
+        run: |
+          echo "ROOT"
+          ls -la
+          echo "CLONED REPO"
+          cd poc-github-actions
+          ls -la
+
