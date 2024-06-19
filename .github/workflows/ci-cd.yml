@@ -19,7 +19,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
 
-jobs:
+
   pr_commented:
     # This job only runs for pull request comments
     name: PR comment
