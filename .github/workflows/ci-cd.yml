@@ -19,17 +19,4 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
       
-      - name: Clone ${{ github.repository }} PUBLIC repository
-        uses: ${{ github.repository }}p@main
-        with:
-          owner: 'nagaraj Mulgund'
-          repository: '${{ github.repository }}'
-      
-      - name: Access cloned repository content
-        run: |
-          echo "ROOT"
-          ls -la
-          echo "CLONED REPO"
-          cd poc-github-actions
-          ls -la
-
+    
