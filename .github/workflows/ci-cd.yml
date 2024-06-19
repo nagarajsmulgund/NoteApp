@@ -19,11 +19,11 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
       
-      - name: Clone https://github.com/nagarajsmulgund/NoteApp PUBLIC repository
-        uses: https://github.com/nagarajsmulgund/NoteApp@main
+      - name: Clone ${{ github.repository }} PUBLIC repository
+        uses: ${{ github.repository }}p@main
         with:
-          owner: 'GuillaumeFalourd'
-          repository: 'poc-github-actions'
+          owner: 'nagaraj Mulgund'
+          repository: '${{ github.repository }}'
       
       - name: Access cloned repository content
         run: |
